@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Starbucks Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="imagens/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Fale conosco</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Não é um simples café... é<br> <span>Starbucks</span></h2>
+                <p>Experimente nossos novos temáticos expressos para o verão!
+                    <br>
+                    Os favoritos da vez são os sabores Menta Americana, Grosseia Selvagem</p> 
+                <a href="#">Saiba mais </a>
+            </div>
+            <div class="imgBox">
+                <img src="imagens/img1.png" class="starbucks">
+            </div>
+        <div>
+            <ul class="thumb">
+                <li><img src="imagens/thumb1.png" onclick="imgSlider('imagens/img1.png')"></li>
+                <li><img src="imagens/thumb2.png" onclick="imgSlider('imagens/img2.png')" ></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="imagens/facebook.png"></a></li>
+                <li><a href="#"><img src="imagens/twitter.png"></a></li>
+                <li><a href="#"><img src="imagens/instagram.png"></a></li>
+            </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+    </script>
+</body>
+</html>
