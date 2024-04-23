@@ -2,13 +2,13 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Starbucks Website</title>
+    <title>StarbucksWeb</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
 </head>
 <body>
     <section>
-        <div class="circle"></div>
+        <div class="circle" id="circleBackground"></div>
         <header>
             <a href="#"><img src="imagens/logo.png" class="logo"></a>
             <ul>
@@ -41,9 +41,36 @@
             </ul>
     </section>
 
+    <img src="imagens/img1.png" class="starbucks animated-image">
+
     <script type="text/javascript">
-        function imgSlider(anything){
-            document.querySelector('.starbucks').src = anything;
+        function imgSlider(anything) {
+            let circle = document.getElementById('circleBackground');
+            if (anything === 'imagens/img1.png') {
+                circle.style.background = '#017143'; 
+            } else {
+                circle.style.background = '#ff69b4'; 
+            }
+            let currentImage = document.querySelector('.starbucks');
+            currentImage.classList.remove('animated-image');
+            setTimeout(() => {
+                currentImage.src = anything;
+                currentImage.classList.add('animated-image');
+            }, 100);
+        }
+
+        function imgSlider(anything) {
+            if (anything === 'imagens/img1.png') {
+                document.getElementById('circleBackground').style.background = '#017143'; 
+            } else {
+                document.getElementById('circleBackground').style.background = '#ff69b4'; 
+            }
+            let currentImage = document.querySelector('.starbucks');
+            currentImage.classList.remove('animated-image');
+            setTimeout(() => {
+                currentImage.src = anything;
+                currentImage.classList.add('animated-image');
+            }, 500); 
         }
     </script>
 </body>
