@@ -40,23 +40,23 @@
                 <li><a href="#"><img src="imagens/instagram.png"></a></li>
             </ul>
     </section>
-
-    <img src="imagens/img1.png" class="starbucks animated-image">
-
+    
     <script type="text/javascript">
         function imgSlider(anything) {
             let circle = document.getElementById('circleBackground');
             if (anything === 'imagens/img1.png') {
-                circle.style.background = '#017143'; 
+                circle.style.background = '#017143';
             } else {
                 circle.style.background = '#ff69b4'; 
             }
             let currentImage = document.querySelector('.starbucks');
             currentImage.classList.remove('animated-image');
+            currentImage.classList.add('fade-out');
             setTimeout(() => {
                 currentImage.src = anything;
+                currentImage.classList.remove('fade-out');
                 currentImage.classList.add('animated-image');
-            }, 100);
+            }, 300);
         }
 
         function imgSlider(anything) {
